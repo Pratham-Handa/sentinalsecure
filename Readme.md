@@ -31,10 +31,10 @@ Security teams receive too many alerts to manually triage.
 
 | Metric | Intrusion Class |
 |--------|----------------|
-| Recall | **TBD** ← Most important |
-| Precision | TBD |
-| F1-Score | TBD |
-| Accuracy | TBD |
+| Recall | **98.73%** ← Most important |
+| Precision | 80.18% |
+| F1-Score | 88.49% |
+| Accuracy | 80% |
 
 > Fill in with numbers from your Jupyter training results.
 
