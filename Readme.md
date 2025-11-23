@@ -1,91 +1,106 @@
-# 🛡️ SentinelSecure v0.1  
-**AI/ML Real-Time Network Intrusion Detection & Triage System**  
-Built for 🚨 *Redact Hackathon 2025 – CyberSecure Problem Statement*
+# 🛡️ SentinelSecure v1  
+AI/ML Real-Time Network Intrusion Detection & Triage System  
+🚨 Built for Redact Hackathon 2025 – CyberSecure Theme
 
 ---
 
 ## ⚡ Overview
 
-Modern SOCs are overwhelmed by alerts. **SentinelSecure** acts as the **first automated triage layer** for network threat detection.
+Security teams receive too many alerts to manually triage.  
+**SentinelSecure** provides an **automated first layer of defence**:
 
-📌 The system:
-- Detects **Intrusion vs Benign** network flows using ML
-- Minimizes **false negatives (high Recall)**
-- Suggests **context-aware security actions**
-- Logs threats in an **immutable hash-chained ledger**
-- Provides **Explainable AI** reasons for every alert
-- Features a **professional cyberpunk SOC dashboard**
-
-> Designed for speed, clarity, and analyst-oriented decision support.
+✔ Detects malicious vs. normal network traffic  
+✔ High **Recall** — avoids missed attacks  
+✔ Automated **security action suggestions**  
+✔ Explainable AI (**why** it was flagged)  
+✔ Blockchain-style hash-chained threat ledger  
+✔ Cyberpunk SOC dashboard 🌐
 
 ---
 
-## 🧠 Core Features
-
-| Capability | Description |
-|-----------|-------------|
-| **ML Intrusion Classifier** | Binary model trained on network flow features |
-| **Priority = Recall** | Avoids missed attacks by aggressive threat detection tuning |
-| 🧪 **Bulk CSV Analysis** | Upload entire flow batches → classification + download |
-| 🎯 **Attack Playground** | Investigate flows individually with XAI insights |
-| 🔄 **What-If Attack Simulator** | Modify features → observe flip from benign to intrusion |
-| 🔐 **Access Gate** | Authorization required to enter console |
-| 🔗 **Threat Ledger** | Blockchain-style hash chaining for tamper-evident logs |
-| ✨ **Cyberpunk SOC UI** | Animated indicators, neon metrics, live threat feed |
+## 🛠️ Tech Stack
+- Streamlit UI
+- ML Model trained on Network Intrusion Dataset
+- XGBoost classifier
+- SHAP-based interpretability
+- In-memory blockchain log (SHA-256 chaining)
 
 ---
 
-## 🧩 Architecture Diagram
-
-Network Flow CSV
-│
-▼
-ML Model → Prediction → Action Logic (BLOCK / QUARANTINE / ALERT / ALLOW)
-│
-├── XAI (Why flagged?)
-└── Threat Ledger (Hash-secured audit chain)
-
-yaml
-Copy code
-
----
-
-## 📈 Performance (Validation Set)
-
-> Fill with your actual metrics before presenting — judges 🔥 this section!
+## 📈 Model Focus: Recall First
 
 | Metric | Intrusion Class |
 |--------|----------------|
-| **Recall** | `TBD` ← Most Important |
-| Precision | `TBD` |
-| F1-Score | `TBD` |
-| Accuracy | `TBD` |
+| Recall | **TBD** ← Most important |
+| Precision | TBD |
+| F1-Score | TBD |
+| Accuracy | TBD |
+
+> Fill in with numbers from your Jupyter training results.
 
 Why Recall?  
-> Missing a real intrusion (False Negative) is more dangerous than blocking a benign flow.
+Missed attacks = security breaches.  
+False alerts = manageable.
 
 ---
 
-## 🛠️ How to Run Locally
+## ⚙️ Run Instructions (Judging Guide)
+
+### 1️⃣ System Requirements
+- Python **3.10 or 3.11 recommended**
+- Git + Stable Internet
+
+### 2️⃣ Setup
 
 ```bash
+git clone https://github.com/YOUR_USERNAME/SentinelSecure.git
+cd SentinelSecure
+
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# Mac/Linux
+source venv/bin/activate
+
 pip install -r requirements.txt
 streamlit run app.py
-Open browser → http://localhost:8501/
 
-🔑 Console Access Code:
+Browser will auto-open:
+http://localhost:8501/
 
-matlab
-Copy code
+3️⃣ Access Code
 sentinel-sec-24
-📦 Folder Structure
-bash
-Copy code
+
+📦 Repository Structure
 📦 SentinelSecure
- ├── app.py                  # Streamlit dashboard UI + logic
- ├── explain.py              # XAI helper (SHAP-like feature contribution)
- ├── ledger.py               # Hash-chained logging (simulated blockchain)
- ├── best_threshold.pkl      # Trained ML model
- ├── sample_flows.csv        # Demo dataset
+ ├── app.py                  # Streamlit cyberpunk dashboard UI
+ ├── best_threshold.pkl      # Trained XGBoost intrusion model
+ ├── explain.py              # SHAP/XAI feature explanation
+ ├── ledger.py               # Hash-chained blockchain logger
+ ├── sample_flows.csv        # Demo dataset for judges
  ├── requirements.txt
  └── README.md
+
+🧩 Key Modules
+Module	Purpose
+Bulk Analysis	Analyze entire CSVs of network flows
+Attack Playground	Investigate single events with XAI
+What-If Attack Simulator	Modify features to trigger intrusion
+Threat Ledger	Tamper-evident incident history
+
+💎 Highlights for Judges
+Working Prototype — full end-to-end demonstration
+
+Automation of analyst decisions
+
+Explainability — “why model thinks it’s an intrusion”
+
+Blockchain — immutable audit trail
+
+UX Design — professional SOC interface
+
+⚡ Optimized for hackathon scoring — zero PPT, full live demo.
+
+👥 Team
+Team : Smart Coders
+Members: Vinit (Leader) + Pratham + Saurav
