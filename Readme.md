@@ -58,10 +58,15 @@ cd SentinelSecure
 
 python -m venv venv
 # Windows
-venv\Scripts\activate
+venv\Scripts\
+just write activate
 # Mac/Linux
-source venv/bin/activate
+source venv/bin/
+just write activate
 
+
+the python virtual environment (venv) will open
+navigate back to the folder containing app.py or you may get error.
 pip install -r requirements.txt
 streamlit run app.py
 
