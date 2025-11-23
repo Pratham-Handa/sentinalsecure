@@ -1,0 +1,39 @@
+# Ignore virtual environments
+venv/
+.env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Local logs & outputs
+*.log
+*.tmp
+
+# Streamlit internal cache
+.streamlit/
+
+# Git folders
+.git/
+.gitignore
+
+# IDE folders
+.vscode/
+.idea/
+
+# Downloads / data dumps
+*.csv
+*.zip
+
+# Build artifacts
+build/
+dist/
+
+# Model training notebooks if any
+*.ipynb
