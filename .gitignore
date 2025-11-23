@@ -1,0 +1,20 @@
+# Python / Streamlit
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Big data (optional – keep only a small sample)
+data/
+*.csv

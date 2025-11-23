@@ -1558,22 +1558,21 @@ elif page == "Model & Evaluation":
     st.markdown("""
     ### Model Summary
 
-    - **Algorithm**: (e.g., Random Forest / XGBoost)  
+    - **Algorithm**: XGBoost Classifier + LightGBM   
     - **Dataset**: Sanitized network flow dataset (e.g., NSL-KDD / CIC-IDS 2017)  
     - **Objective**: Prioritize **Recall** on the Intrusion class (minimize missed attacks).
 
-    Update the bullets below with your *actual* metrics from your training notebook.
+    
     """)
 
     st.markdown("""
     ### Validation Metrics (Hold-out set)
 
-    - Accuracy: **XX.XX**  
-    - Precision (Intrusion): **YY.YY**  
-    - Recall (Intrusion): **ZZ.ZZ**  
-    - F1-score (Intrusion): **WW.WW**
+    - Accuracy: **80%**  
+    - Precision (Intrusion): **80.18%**  
+    - Recall (Intrusion): **98.73%**  
+    - F1-score (Intrusion): **88.49%**
 
-    _Replace XX/YY/ZZ/WW with your real numbers (from your notebook / report)._
     """)
 
     st.markdown("""
@@ -1587,13 +1586,4 @@ elif page == "Model & Evaluation":
     """)
 
     st.markdown("""
-    ### Confusion Matrix (example structure)
-
-    - True Intrusions correctly caught (TP): **TBD**  
-    - Benign flows incorrectly flagged as intrusions (FP): **TBD**  
-    - Intrusions missed (FN): **TBD**  
-    - Benign flows correctly allowed (TN): **TBD**
-
-    _Fill in using counts from your evaluation notebook to show judges you understand
-    the trade-offs._
     """)
